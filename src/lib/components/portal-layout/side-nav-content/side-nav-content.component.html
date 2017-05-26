@@ -1,0 +1,5 @@
+<button class="menu-toggle-btn" md-icon-button (click)="toggleMenu.emit()">
+  <md-icon class="menu-toggle" color="primary" [class.active]="menuVisible">menu</md-icon>
+</button>
+
+<cm-sidenav-list class="nav-container" [open]="menuVisible" [navRoot]="rootSection"></cm-sidenav-list>

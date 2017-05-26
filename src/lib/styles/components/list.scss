@@ -1,0 +1,10 @@
+
+@mixin cm-list-theme ($theme){
+  .mat-list.sm{
+    & > .mat-list-item {
+      & > .mat-list-item-content {
+        height: 26px;
+      }
+    }
+  }
+}

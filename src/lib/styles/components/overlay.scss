@@ -1,0 +1,6 @@
+@mixin cm-overlay-theme ($theme){
+  .cdk-overlay-pane.full-screen {
+    width: 100%;
+    height: 100%;
+  }
+}

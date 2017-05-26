@@ -1,0 +1,65 @@
+@import '~@angular/material/theming';
+@import './palette';
+@import '../../../src/lib/styles/index';
+@import './style';
+
+// Include non-theme styles for core.
+@include mat-core();
+
+// Define a theme.
+$primary: mat-palette($app-primary);
+$accent:  mat-palette($app-accent);
+$warn: mat-palette($app-warn);
+
+// Foreground palette for light themes.
+$custom-foreground: (
+  base:            black,
+  divider:         rgba(black, 0.12),
+  dividers:        rgba(black, 0.12),
+  disabled:        rgba(black, 0.38),
+  disabled-button: rgba(black, 0.38),
+  disabled-text:   rgba(black, 0.38),
+  hint-text:       rgba(black, 0.38),
+  secondary-text:  rgba(black, 0.54),
+  icon:            rgba(black, 0.54),
+  icons:           rgba(black, 0.54),
+  text:            rgba(black, 0.87),
+  menu-nav-text: #2e3133,
+  menu-subnav-text: #2e3133,
+);
+
+// Background palette for light themes.
+$custom-background: (
+  status-bar: map_get($mat-grey, 300),
+  app-bar:    map_get($mat-grey, A100),
+  background: map_get($mat-grey, 50),
+  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+  card:       white,
+  dialog:     white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  spinner-backdrop: rgba(#fff, 0.7),
+  focused-button: $black-6-opacity,
+  selected-button: map_get($mat-grey, 300),
+  selected-disabled-button: map_get($mat-grey, 400),
+  disabled-button-toggle: map_get($mat-grey, 200),
+  border: #ccc,
+  border-light: #ebebeb,
+  selected-sidenav-item: #f0f5fa,
+  selected-sub-sidenav-item: #e4e9ee,
+);
+
+@function custom-theme($primary, $accent, $warn, $foreground, $background) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: false,
+    foreground: $foreground,
+    background: $background,
+  );
+}
+// Include all theme styles for the components.
+
+$theme: custom-theme($primary, $accent, $warn, $custom-foreground, $custom-background);
+@include cm-load-theme($theme);

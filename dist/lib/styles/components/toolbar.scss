@@ -1,0 +1,40 @@
+@import '../font';
+
+@mixin cm-toolbar-theme($theme){
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  
+  md-toolbar{
+    min-height: 3rem !important;
+    border-bottom: solid 1px map-get($background, border-light);
+    
+    .mat-toolbar-row{
+      h1{
+        @include cm-h1-font();
+      }
+    }
+  }
+  @media (max-width: 960px) and (orientation: landscape){
+    md-toolbar{
+      .mat-toolbar-row {
+        height: 3rem;
+      }
+      .mat-toolbar-row {
+        height: 3rem;
+      }
+    }
+  }
+  @media (min-width: 960px) and (orientation: landscape){
+    md-toolbar{
+      .mat-toolbar-row {
+        height: 3rem;
+      }
+      .mat-toolbar-row {
+        height: 3rem;
+      }
+    }
+  }
+}

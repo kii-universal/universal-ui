@@ -1,0 +1,15 @@
+
+
+@mixin cm-checkbox-theme($theme){
+  md-checkbox.mat-checkbox{
+    & > .mat-checkbox-layout {
+      & > .mat-checkbox-inner-container {
+        height: 16px;
+        width: 16px;
+        & > .mat-checkbox-frame {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

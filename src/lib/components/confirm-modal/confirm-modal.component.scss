@@ -1,0 +1,31 @@
+md-dialog-content{
+  text-align: center;
+}
+
+.modal-footer{
+  display: flex;
+  justify-content: center; 
+  align-content: center;
+}
+
+.btn-item{
+  width: 85px;
+  font-size: 13px;
+
+  md-icon{
+    width: 40px;
+    height: 40px;
+    font-size: 23px;
+    text-align: center;
+    line-height: 40px;
+    .mat-icon {
+      line-height: 40px !important;
+    }
+  }
+}
+
+md-spinner{
+  margin: 0px auto;
+  width: 40px;
+  height: 40px;
+}

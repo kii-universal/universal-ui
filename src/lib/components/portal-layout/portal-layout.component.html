@@ -1,0 +1,21 @@
+<md-sidenav-container fullscreen class="custom">
+  <md-sidenav #sidenav mode="custom" [opened]="showSidenav">
+    <side-nav-content 
+      [rootSection]="rootSection" 
+      [menuVisible]="showSidenav" 
+      (toggleMenu)="sideNavToggleClick()"
+    ></side-nav-content>
+  </md-sidenav>
+  <div class="portal-main">
+    <div class="loading-overlay" [hidden]="!loading">
+      <!-- show something fancy here, here with Angular 2 Material's loading bar or circle -->
+      <md-progress-bar mode="indeterminate"></md-progress-bar>
+    </div>
+    <cm-toolbar>
+      <ng-content select="[portal-toolbar]"></ng-content>
+    </cm-toolbar>
+    <div class="content-container">
+      <ng-content select="[portal-content]"></ng-content>
+    </div>
+  </div>
+</md-sidenav-container>

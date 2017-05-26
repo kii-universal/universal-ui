@@ -1,0 +1,7 @@
+@import './error-container/error-container.component';
+@import './error-item/error-item.component';
+
+@mixin cm-error-controller-theme($theme) {
+  @include cm-error-item-theme($theme);
+  @include cm-error-container-theme($theme);
+}

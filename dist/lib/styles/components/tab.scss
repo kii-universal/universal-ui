@@ -1,0 +1,42 @@
+
+@mixin cm-tab-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .mat-tab-group[full-ink-bar] {
+    & > .mat-tab-header{
+      & > .mat-tab-label-container {
+        & > .mat-tab-list{
+          & > .mat-tab-labels{
+            position: relative;
+            z-index: 2;
+            & > .mat-tab-label{
+               min-width: 8rem;
+            }
+            & > .mat-tab-label.mat-tab-label-active{
+              color: #fff;
+            }
+          }
+          & > .mat-ink-bar{
+            height: 100%;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+  .mat-tab-group[tab-center] {
+    & > .mat-tab-header{
+      & > .mat-tab-label-container {
+        & > .mat-tab-list {
+          & > .mat-tab-labels{
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}

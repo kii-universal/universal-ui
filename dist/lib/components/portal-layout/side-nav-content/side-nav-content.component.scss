@@ -1,0 +1,38 @@
+@mixin cm-side-nav-content-theme($theme){
+  side-nav-content {
+    .menu-toggle-btn{
+      margin: 4px !important;
+      border-radius: 50%;
+      background: #f2f6f7;
+      color: #00b4ff;
+    }
+
+    .menu-toggle{
+      &.active{
+        transform: rotate(90deg);
+      }
+      transition: all 0.2s ease;
+    }
+
+    .nav-container{
+      position: relative;
+      top: 80px;
+    }
+
+    cm-sidenav-list {
+      cm-sidenav-item {
+        & > a {
+          &.active {
+            color: rgba(255,255,255,0.8);
+            pointer-events: none;
+            cursor: default;
+            background: rgba(0,0,0,0.2);
+          }
+          &[md-list-item] .mat-list-item-content{
+            padding: 0px 8px !important;
+          }
+        }
+      }
+    }
+  }
+}

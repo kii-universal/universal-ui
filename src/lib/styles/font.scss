@@ -1,0 +1,50 @@
+$font-family: 'roboto';
+
+@mixin cm-h1-font(){
+  color: #2ca1f4;
+  font-size: 1.5rem;
+  font-family: $font-family;
+}
+
+@mixin cm-h2-font(){
+  color: #555555;
+  font-size: 1rem;
+  font-family: $font-family;
+}
+
+@mixin cm-h3-font(){
+  color: #3f5269;
+  font-size: 1rem;
+  font-family: $font-family;
+}
+
+@mixin cm-h4-font(){
+  color: #657384;
+  font-size: 1rem;
+  font-family: $font-family;
+  
+}
+
+@mixin cm-normal-font(){
+  color: #31384a;
+  font-size: 0.8125rem;
+  font-family: $font-family;
+}
+
+@mixin cm-secondary-font(){
+  color: #898f9d;
+  font-size: 0.75rem;
+  font-family: $font-family;  
+}
+
+@mixin cm-accent-font(){
+  color: #808080;
+  font-size: 1rem;
+  font-family: $font-family;
+}
+
+@mixin cm-error-font(){
+  color: #f1737c;
+  font-family: $font-family;
+  font-size: 0.865rem;
+}

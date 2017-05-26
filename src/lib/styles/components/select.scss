@@ -1,0 +1,34 @@
+@import '~@angular/material/theming';
+
+@mixin cm-select-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  md-select.mat-select {
+    .mat-select-trigger {
+      min-width: 3rem;
+    }
+    &[no-underline] {
+      .mat-select-underline {
+        display: none;
+      }
+    }
+    &[text-center]{
+      text-align: center;
+      .mat-select-value{
+        position: relative;
+        .mat-select-value-text{
+          margin: 0px auto;
+        }
+      }
+    }
+    &[placeholder-hidden] {
+      .mat-select-placeholder.mat-floating-placeholder {
+        display: none;
+      }
+    }
+  }
+}

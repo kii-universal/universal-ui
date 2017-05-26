@@ -1,0 +1,26 @@
+@import './components/index';
+@import '../components/index';
+@import './font.scss';
+
+@mixin cm-load-theme($theme) {
+  // include default theme
+  @include angular-material-theme($theme);
+
+  // override default theme with custom theme
+  @include cm-icon-theme($theme);
+  @include custom-sidenav($theme);
+  @include cm-select-theme($theme);
+  @include cm-tab-theme($theme);
+  @include cm-checkbox-theme($theme);
+  @include cm-list-theme($theme);
+  @include cm-slide-toggle-theme($theme);
+  @include cm-overlay-theme($theme);
+  @include cm-dialog-theme($theme);
+  @include cm-toolbar-theme($theme);
+  @include cm-button-spinner-theme($theme);
+  @include cm-portal-layout-theme($theme);
+  @include cm-error-controller-theme($theme);
+  @include cm-content-tainer-theme($theme);
+  @include cm-confirm-modal-theme($theme);
+  @include cm-portal-modal-theme($theme);
+}
