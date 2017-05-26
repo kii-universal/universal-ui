@@ -20,7 +20,7 @@
   @include cm-button-spinner-theme($theme);
   @include cm-portal-layout-theme($theme);
   @include cm-error-controller-theme($theme);
-  @include cm-content-tainer-theme($theme);
+  @include cm-content-container-theme($theme);
   @include cm-confirm-modal-theme($theme);
   @include cm-portal-modal-theme($theme);
 }

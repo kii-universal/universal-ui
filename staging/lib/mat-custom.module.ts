@@ -11,15 +11,17 @@ import { CMSideNavList } from './components/side-nav/side-nav-list/side-nav-list
 import { ToolbarSubTitle } from './components/content-container/toolbar-sub-title.component';
 import { ContentContainer } from './components/content-container/content-container.component';
 import { CUSTOM_MODULES, CUSTOM_PROVIDERS } from './components/index';
+import { _MaterialModule } from './_material.module';
 
 @NgModule({
   declarations: [
   ],
   exports: [
     ...CUSTOM_MODULES,
+    _MaterialModule
   ],
   imports: [
-    MaterialModule,
+    _MaterialModule,
     FormsModule,
     CommonModule,
     RouterModule,

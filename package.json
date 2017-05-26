@@ -1,10 +1,10 @@
 {
-  "name": "@kii-cn/universal-ui",
-  "version": "0.0.1",
+  "name": "kii-universal-ui",
+  "version": "0.0.21",
   "description": "kii universal ui ",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
-  "repository": "git@github.com:ytyszxf/universal-ui.git",
+  "repository": "git@github.com:kii-universal/universal-ui.git",
   "author": "ytyszxf <ljz135790@gmail.com>",
   "license": "MIT",
   "scripts": {

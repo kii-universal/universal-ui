@@ -94,60 +94,6 @@ module.exports = function (options) {
       library: 'ac_[name]',
       libraryTarget: 'var',
     },
-
-    module: {
-
-      rules: [
-       {
-         test: /\.ts$/,
-         use: [
-           {
-             loader: 'tslint-loader',
-             options: {
-               configFile: 'tslint.json'
-             }
-           }
-         ],
-         exclude: [/\.(spec|e2e)\.ts$/]
-        },
-      
-        /* Raw loader support for *.html
-         * Returns file content as string
-         *
-         * See: https://github.com/webpack/raw-loader
-         */
-        {
-          test: /\.(html|txt)$/,
-          use: 'raw-loader',
-          exclude: [helpers.root('dev/index.html')]
-        },
-
-        /*
-         * css loader support for *.css files (styles directory only)
-         * Loads external css styles into the DOM, supports HMR
-         *
-         */
-        {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader'],
-          include: [helpers.root('src', 'styles')]
-        },
-
-        /*
-         * sass loader support for *.scss files (styles directory only)
-         * Loads external sass styles into the DOM, supports HMR
-         *
-         */
-        {
-          test: /\.scss$/,
-          use: ['style-loader', 'css-loader', 'sass-loader'],
-          include: [helpers.root('src', 'styles')]
-        },
-
-      ]
-
-    },
-
     plugins: [
 
       /**
@@ -291,6 +237,5 @@ module.exports = function (options) {
       clearImmediate: false,
       setImmediate: false
     }
-
   });
 }

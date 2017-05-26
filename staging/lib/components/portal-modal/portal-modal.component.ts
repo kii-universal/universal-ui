@@ -54,7 +54,7 @@ export class PortalModalCmp {
     private _mdr: MdDialogRef<any>
   ) { }
 
-  public addCmp<T>(cmpType: ComponentType<T>, data?): T {
+  public addCmp<T>(cmpType: ComponentType<T>, data?: any): T {
     let componentFactory = this._cfr.resolveComponentFactory(cmpType);
     let valueProvider: ValueProvider = {
       provide: PortalModalRef,

@@ -22,7 +22,8 @@ task(':ts:stage', function () {
 });
 
 task('clean', [':clean:dist', ':clean:stage']);
-task('dist', (done)=>{
+
+task('dist', (done) => {
     gulpRunSequence(
         'clean',
         ':ts:stage',

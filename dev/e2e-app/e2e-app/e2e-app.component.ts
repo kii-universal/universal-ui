@@ -14,7 +14,6 @@ export class Home {}
       (toggleSidenav)="toggleSidenav()" 
       [showSidenav]="showSidenav"
       [rootSection]="rootSection"
-      [menuVisible]="menuVisible"
     >
       <div portal-toolbar>
         Kii Universal Layout
